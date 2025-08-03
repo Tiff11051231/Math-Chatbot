@@ -17,10 +17,8 @@
       background-color: #4a90e2;
       color: white;
     }
-    iframe {
-      width: 100%;
-      height: 80vh;
-      border: none;
+    #chtl-launcher {
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -30,8 +28,13 @@
     <p>Ask me any math question — I'll help you solve it step by step!</p>
   </header>
 
-  <!-- Replace YOUR_BOT_ID with your actual Chatling embed URL -->
-  <iframe src="<script> window.chtlConfig = { chatbotId: "5411518216" } </script>
-<script async data-id="5411518216" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>" allow="clipboard-write"></iframe>
+  <!-- This is where Chatling will load the widget -->
+  <div id="chtl-launcher"></div>
+
+  <!-- Your Chatling embed script -->
+  <script>
+    window.chtlConfig = { chatbotId: "5411518216" };
+  </script>
+  <script async data-id="5411518216" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
 </body>
 </html>
