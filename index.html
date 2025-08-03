@@ -3,38 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Math Tutor Chatbot</title>
+  <title>オンライン個別指導 | Math Tutor Bot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
+      font-family: 'Noto Sans JP', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
-    header {
-      padding: 2rem;
-      background-color: #4a90e2;
+
+    .hero {
+      background-color: #f03e3e;
       color: white;
+      padding: 3rem 2rem;
+      text-align: center;
     }
-    #chtl-launcher {
-      margin-top: 2rem;
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .features {
+      padding: 2rem;
+      background-color: white;
+      text-align: center;
+    }
+
+    .features h2 {
+      color: #f03e3e;
+      margin-bottom: 1rem;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .chat-section {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      max-width: 800px;
+    }
+
+    .cta {
+      background-color: #ffe8e8;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .cta button {
+      background-color: #f03e3e;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .cta button:hover {
+      background-color: #d32f2f;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🧮 Math Tutor Chatbot</h1>
-    <p>Ask me any math question — I'll help you solve it step by step!</p>
-  </header>
 
-  <!-- This is where Chatling will load the widget -->
-  <div id="chtl-launcher"></div>
+  <section class="hero">
+    <h1>あなた専用のAI個別指導</h1>
+    <p>どんな数学の質問でも、わかりやすくステップごとに解説します。</p>
+  </section>
 
-  <!-- Your Chatling embed script -->
-  <script>
-    window.chtlConfig = { chatbotId: "5411518216" };
-  </script>
-  <script async data-id="5411518216" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+  <section class="features">
+    <h2>こんな方におすすめ</h2>
+    <ul>
+      <li>✔︎ 宿題の解き方がわからない</li>
+      <li>✔︎ 試験対策をしたい</li>
+      <li>✔︎ 数学が苦手だけど得意になりたい</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <p>まずは質問してみよう！</p>
+    <button onclick="document.getElementById('chat').scrollIntoView({behavior: 'smooth'})">
+      数学を質問する
+    </button>
+  </section>
+
+  <section class="chat-section" id="chat">
+    <iframe src="https://www.chatling.ai/chatbot/9162248845/embed" allow="clipboard-write"></iframe>
+  </section>
+
 </body>
 </html>
