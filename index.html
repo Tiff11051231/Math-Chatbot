@@ -124,20 +124,16 @@
   </section>
 
   <section class="chat-section" id="chat">
-    <div class="chatbots">
-      <div class="chatbot-box">
-        <h3>チャットボット A（左）</h3>
-        <div id="chatbot-left"></div>
-      </div>
-      <div class="chatbot-box">
-        <h3>チャットボット B（右）</h3>
-        <div id="chatbot-right"></div>
-      </div>
+  <div class="chatbots">
+    <div class="chatbot-box">
+      <h3>チャットボット A（左）</h3>
+      <!-- Embed Chatbot A -->
+      <script src="https://embed.chatling.ai/launch.js" data-chatbot-id="9778366337"></script>
     </div>
-  </section>
-
-  <!-- Chatbot A -->
-  <script>
-    window.chtlConfigLeft = { chatbotId: "9778366337", container: "#chatbot-left" };
-    const scriptA = document.createElement("script");
-    scriptA.src = "https://chatling.ai/js/embed.js
+    <div class="chatbot-box">
+      <h3>チャットボット B（右）</h3>
+      <!-- Embed Chatbot B -->
+      <script src="https://embed.chatling.ai/launch.js" data-chatbot-id="3232849331"></script>
+    </div>
+  </div>
+</section>
