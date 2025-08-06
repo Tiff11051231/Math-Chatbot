@@ -76,8 +76,26 @@
       text-align: center;
     }
 
-    #chtl-launcher {
-      margin-top: 2rem;
+    .chatbots {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .chatbot-box {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: white;
+    }
+
+    .chatbot-box h3 {
+      margin-top: 0;
+      color: #1971c2;
     }
   </style>
 </head>
@@ -106,14 +124,20 @@
   </section>
 
   <section class="chat-section" id="chat">
-    <div id="chtl-launcher"></div>
+    <div class="chatbots">
+      <div class="chatbot-box">
+        <h3>チャットボット A（左）</h3>
+        <div id="chatbot-left"></div>
+      </div>
+      <div class="chatbot-box">
+        <h3>チャットボット B（右）</h3>
+        <div id="chatbot-right"></div>
+      </div>
+    </div>
   </section>
 
-  <!-- ✅ Chatling script (new bot ID) -->
+  <!-- Chatbot A -->
   <script>
-    window.chtlConfig = { chatbotId: "9162248845" };
-  </script>
-  <script async data-id="9162248845" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-
-</body>
-</html>
+    window.chtlConfigLeft = { chatbotId: "9778366337", container: "#chatbot-left" };
+    const scriptA = document.createElement("script");
+    scriptA.src = "https://chatling.ai/js/embed.js
