@@ -87,15 +87,7 @@
       flex: 1;
       min-width: 300px;
       max-width: 500px;
-      border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 1rem;
-      background-color: white;
-    }
-
-    .chatbot-box h3 {
-      margin-top: 0;
-      color: #1971c2;
     }
   </style>
 </head>
@@ -124,16 +116,17 @@
   </section>
 
   <section class="chat-section" id="chat">
-  <div class="chatbots">
-    <div class="chatbot-box">
-      <h3>チャットボット A（左）</h3>
-      <!-- Embed Chatbot A -->
-      <script src="https://embed.chatling.ai/launch.js" data-chatbot-id="9778366337"></script>
+    <div class="chatbots">
+      <div class="chatbot-box">
+        <!-- Embed Chatbot 1 -->
+        <script src="https://embed.chatling.ai/launch.js" data-chatbot-id="9778366337"></script>
+      </div>
+      <div class="chatbot-box">
+        <!-- Embed Chatbot 2 -->
+        <script src="https://embed.chatling.ai/launch.js" data-chatbot-id="3232849331"></script>
+      </div>
     </div>
-    <div class="chatbot-box">
-      <h3>チャットボット B（右）</h3>
-      <!-- Embed Chatbot B -->
-      <script src="https://embed.chatling.ai/launch.js" data-chatbot-id="3232849331"></script>
-    </div>
-  </div>
-</section>
+  </section>
+
+</body>
+</html>
